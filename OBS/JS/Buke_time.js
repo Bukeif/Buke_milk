@@ -1,3 +1,4 @@
+//rename
 document.addEventListener("DOMContentLoaded", () =>
 {
     const clockEl = document.getElementById("clock");

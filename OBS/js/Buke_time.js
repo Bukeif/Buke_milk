@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () =>
     const dateEl = document.getElementById("date");
 
     const weekdays = [
-        "星期日",
-        "星期一",
-        "星期二",
-        "星期三",
-        "星期四",
-        "星期五",
-        "星期六"
+        "Sun",
+        "Mon",
+        "Tues",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
     ]
 
     function updateClock()

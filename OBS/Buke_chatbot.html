@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Buke_chatbot.css">
+    <script src="js/Buke_chatbot.js"></script>
+</head>
+
+<body>
+    <!-- item will be appended to this layout -->
+    <div id="log" class="sl__chat__layout">
+
+    </div>
+
+    <!-- chat item -->
+    <script type="text/template" id="chatlist_item">
+        <div data-from="{from}" data-id="{messageId}">
+            <span class="meta" style="color: {color}">
+                <span class="badges"></span>
+                <span class="name">{from}</span>
+            </span>
+            <div class="c_box">
+              <span class="message">{message}</span>
+              <span class="single_text">✨</span>
+              <span class="double_text">🐳</span>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

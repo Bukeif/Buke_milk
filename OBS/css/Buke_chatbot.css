@@ -1,0 +1,190 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:700);*/
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Hachi+Maru+Pop&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+
+    /*text-shadow: 0 0 1px #000, 0 0 2px #000;*/
+
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 700;
+
+    font-size: 35px;
+    line-height: 1.5em;
+
+    color: 65BAF9;
+}
+
+#log>div {
+
+    animation: fadeInRight .3s ease forwards,
+        fadeOut 0.5s ease 15s forwards;
+
+    -webkit-animation: fadeInRight .3s ease forwards,
+        fadeOut 0.5s ease 15s forwards;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    table-layout: fixed;
+
+
+}
+
+#log>div {
+    display: flex;
+    flex-direction: column;
+    /* 讓子元素上下排列 */
+    padding: 5px;
+    /* 增加一點內邊距看起來更舒服 */
+    margin-bottom: 5px;
+    /* 每條訊息之間的間距 */
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+
+#log .message,
+#log .meta {
+    vertical-align: center;
+
+}
+
+#log .meta {
+    /*帳號*/
+    display: inline-block;
+    width: auto;
+    max-width: 90%;
+    /*修正對齊：在 Flex 容器中，這行能確保它靠左不拉伸 */
+    align-self: flex-start;
+    text-align: left;
+    /*padding-right: 0.5em;*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    margin: 5px 0px;
+
+}
+
+.c_box {
+    /*訊息內容_父框*/
+    /*border-bottom: 3px solid #4d4d4d;*/
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#log .message {
+    /*訊息內容*/
+    word-wrap: break-word;
+    width: 100%;
+
+}
+
+/* 如果使用你截圖中的 HTML 標籤 */
+.single_text,
+.double_text {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    display: none;
+    /* 預設先隱藏 */
+}
+
+/* 單數行顯示 single_text */
+#log>div:nth-child(odd) .single_text {
+    display: block;
+}
+
+#log>div:nth-child(odd) .meta {
+    /*紫*/
+    background: rgba(185, 179, 233, 1);
+    border: 5px solid rgb(165, 91, 205);
+}
+
+#log>div:nth-child(odd) .name {
+    color: rgb(165, 91, 205);
+}
+
+#log>div:nth-child(odd) .c_box {
+    background: rgba(74, 78, 105, 1);
+    border-left: 3px solid rgb(235, 130, 165);
+}
+
+#log>div:nth-child(odd) .message {
+    color: rgb(165, 91, 205);
+}
+
+/* 雙數行顯示 double_text */
+#log>div:nth-child(even) .double_text {
+    display: block;
+}
+
+#log>div:nth-child(even) .meta {
+    /*粉*/
+    background: rgba(244, 218, 233, 1);
+    border: 5px solid rgb(235, 130, 165);
+}
+
+#log>div:nth-child(even) .name {
+    color: rgb(235, 130, 165);
+}
+
+#log>div:nth-child(even) .c_box {
+    background: rgba(93, 83, 94, 1);
+    border-left: 3px solid rgb(180, 130, 235);
+}
+
+#log>div:nth-child(even) .message {
+    color: rgb(235, 130, 165);
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.name {
+    margin-left: 0.2em;
+}

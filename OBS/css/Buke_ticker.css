@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Hachi+Maru+Pop&display=swap');
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*font-family: "Segoe UI", "Noto Sans TC", sans-serif;*/
+    font-family: "Hachi Maru Pop", cursive;
+}
+
+.wrapper {
+    width: 1000px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    /*border: 1px solid rgb(208, 116, 250);*/
+}
+
+#ticker {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 15px;
+    color: rgb(229, 137, 137);
+    transform: translateX(100%);
+}
+
+.ticker {
+    display: none;
+}

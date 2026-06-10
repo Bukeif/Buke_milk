@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () =>
 {
-    const clockEl = document.getElementById("clock");
+    const clockEhour = document.getElementById("c-hour");
+    const clockEminute = document.getElementById("c-minute");
     const dateEl = document.getElementById("date");
 
     const weekdays = [
@@ -17,13 +18,8 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         const now = new Date();
         // clock
-        const timeString = new Intl.DateTimeFormat("zh-TW", {
-            timeZone: "Asia/Taipei",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: false
-        }).format(now);
+        const hourString = String(now.getHours()).padStart(2, "0");
+        const minuteString = String(now.getMinutes()).padStart(2, "0");
 
         //date
         const year = now.getFullYear();
@@ -31,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () =>
         const day = String(now.getDate()).padStart(2, "0");
         const weekday = weekdays[now.getDay()];
 
-        clockEl.textContent = timeString;
+        clockEhour.textContent = hourString;
+        clockEminute.textContent = minuteString;
         dateEl.textContent = `${year}-${month}-${day} ${weekday}`;
     }
 

@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     // 抓取內容 & 跟定位容器
     //const messages = document.querySelectorAll(".ticker");
-    const messages = fetch("./json/ticker_notice.json");
-
+    const response = await fetch("./json/ticker_notice.json");
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+    console.log(data.messages);
     const ticker = document.getElementById("ticker");
-    console.log(messages);
+    //console.log(messages);
     // 計數器
     let currentIndex = 0;
     // 開跑

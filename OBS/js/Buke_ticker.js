@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", () =>
+document.addEventListener("DOMContentLoaded", async () =>
 {
     // 抓取內容 & 跟定位容器
     let messages = [];
-    const response = fetch("json/ticker_notice.json");
-    const data = response.json();
+    const response = await fetch("json/ticker_notice.json");
+    const data = await response.json();
     messages = data.message;
     const ticker = document.getElementById("ticker");
-    //console.log(messages);
+    console.log(messages);
     // 計數器
     let currentIndex = 0;
     // 開跑
     function runTicker()
     {
-        ticker.textContent = messages[currentIndex].textContent;
+        ticker.textContent = messages[currentIndex].text;
 
         const wrapperWidth =
             document.querySelector(".wrapper").offsetWidth;

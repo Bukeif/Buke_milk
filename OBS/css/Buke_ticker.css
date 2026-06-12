@@ -7,11 +7,14 @@ body {
     justify-content: center;
     /*font-family: "Segoe UI", "Noto Sans TC", sans-serif;*/
     font-family: "Hachi Maru Pop", cursive;
-    /*background-color: black;*/
+    /*
+    background-color: black;
+    */
 }
 
 .wrapper {
-    width: 100%;
+    left: 7%;
+    width: 93%;
     height: 50px;
     overflow: hidden;
     position: relative;

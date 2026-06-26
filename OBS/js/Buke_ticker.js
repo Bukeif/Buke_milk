@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () =>
 
         // 位移
         const duration =
-            distance / 60;
+            distance / 240;
 
         ticker.animate(
             [
